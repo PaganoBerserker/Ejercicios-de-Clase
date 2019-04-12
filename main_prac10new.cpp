@@ -1,11 +1,9 @@
-//Semestre 2017 - 2
-//************************************************************//
-//************************************************************//
-//************** Alumno (s): *********************************//
-//*************											******//
-//*************											******//
-//************************************************************//
-//************************************************************//
+//*****************Semestre 2019-2*****************************//
+//****************Visual Studio 2017**********************************************************//
+//************** Alumno (s): Bermudez Sotelo Gustavo *****************************************//
+//*************	Lab. Computaci√≥n Gr√°fica   Gpo: 02 ********************//					
+//*************Practica 10: Coche en Movimiento******************//
+//************* Solo se inicia con espacio**************************//
 
 #include "texture.h"
 #include "figuras.h"
@@ -53,7 +51,7 @@ CFiguras fig7; //Para el monito
 CModel kit;
 CModel llanta;
 
-//AnimaciÛn del coche
+//Animaci√≥n del coche
 
 float movKit = 0.0;
 
@@ -168,7 +166,7 @@ void display(void)   // Creamos la funcion donde se dibuja
 	glScalef(0.3, 0.3, 0.3);
 
 	glTranslatef(0, 4, movKit);		//movkit es el movimiento
-									//Pongo aquÌ la carroceria del carro			Glrender mandar a dibujar lo que ya cargamos
+									//Pongo aqu√≠ la carroceria del carro			Glrender mandar a dibujar lo que ya cargamos
 	kit.GLrender(NULL, _SHADED, 1.0);  //_WIRED O _POINTS
 
 
@@ -365,7 +363,7 @@ void keyboard(unsigned char key, int x, int y)  // Create Keyboard Function
 		break;
 
 	case ' ':		//Poner algo en movimiento
-		g_fanimacion ^= true; //Activamos/desactivamos la animacÌon
+		g_fanimacion ^= true; //Activamos/desactivamos la animac√≠on
 
 
 		break;
@@ -418,14 +416,14 @@ int main(int argc, char** argv)   // Main Function
 {
 	glutInit(&argc, argv); // Inicializamos OpenGL
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Doble )
-	glutInitWindowSize(1200, 1200);	// TamaÒo de la Ventana
+	glutInitWindowSize(1200, 1200);	// Tama√±o de la Ventana
 	glutInitWindowPosition(0, 0);	//Posicion de la Ventana
 	glutCreateWindow("Practicashki 10 de Clasenski"); // Nombre de la Ventana
 									 //glutFullScreen     ( );         // Full Screen
 	InitGL();						// Parametros iniciales de la aplicacion
-	glutDisplayFunc(display);  //Indicamos a Glut funciÛn de dibujo
-	glutReshapeFunc(reshape);	//Indicamos a Glut funciÛn en caso de cambio de tamano
-	glutKeyboardFunc(keyboard);	//Indicamos a Glut funciÛn de manejo de teclado
+	glutDisplayFunc(display);  //Indicamos a Glut funci√≥n de dibujo
+	glutReshapeFunc(reshape);	//Indicamos a Glut funci√≥n en caso de cambio de tamano
+	glutKeyboardFunc(keyboard);	//Indicamos a Glut funci√≥n de manejo de teclado
 	glutSpecialFunc(arrow_keys);	//Otras
 	glutIdleFunc(animacion);
 	glutMainLoop();          // 
